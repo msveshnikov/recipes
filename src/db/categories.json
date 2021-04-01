@@ -1,0 +1,440 @@
+[
+    { "id": 1, "Title": "Салаты", "Rank": 124, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    {
+        "id": 2,
+        "Title": "Закуски, бутерброды",
+        "Rank": 150,
+        "ParentCategory_ID": 0,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 3, "Title": "Первые блюда", "Rank": 145, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    { "id": 4, "Title": "Вторые блюда", "Rank": 140, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    { "id": 5, "Title": "Рыбные блюда", "Rank": 130, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 6, "Title": "Сладкая выпечка", "Rank": 110, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    { "id": 7, "Title": "Несладкая выпечка", "Rank": 115, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    { "id": 8, "Title": "Блины, оладьи", "Rank": 120, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 9, "Title": "Торты, пирожные", "Rank": 105, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 10, "Title": "Десерты", "Rank": 100, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    { "id": 12, "Title": "Интересности", "Rank": 85, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 13, "Title": "Мясные блюда", "Rank": 135, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 14, "Title": "Суши, роллы", "Rank": 125, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 15, "Title": "Напитки, коктейли", "Rank": 95, "ParentCategory_ID": 0, "Language_ID": 0, "keywords": null },
+    {
+        "id": 31,
+        "Title": "Бутерброды, сэндвичи",
+        "Rank": 40,
+        "ParentCategory_ID": 2,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 32, "Title": "Тосты, гренки", "Rank": 35, "ParentCategory_ID": 2, "Language_ID": 0, "keywords": null },
+    {
+        "id": 33,
+        "Title": "Канапе, шпажки, корзинки",
+        "Rank": 30,
+        "ParentCategory_ID": 2,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 35,
+        "Title": "Омлеты, закуски из яиц",
+        "Rank": 25,
+        "ParentCategory_ID": 2,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 37,
+        "Title": "Закуски из морепродуктов",
+        "Rank": 20,
+        "ParentCategory_ID": 2,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 38,
+        "Title": "Закуски из овощей, грибов",
+        "Rank": 15,
+        "ParentCategory_ID": 2,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 39, "Title": "Закуски из сыра", "Rank": 10, "ParentCategory_ID": 2, "Language_ID": 1, "keywords": null },
+    { "id": 43, "Title": "Холодные супы", "Rank": 1, "ParentCategory_ID": 3, "Language_ID": 0, "keywords": null },
+    {
+        "id": 46,
+        "Title": "Сырные, сливочные супы",
+        "Rank": 4,
+        "ParentCategory_ID": 3,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 47, "Title": "Овощные супы", "Rank": 40, "ParentCategory_ID": 3, "Language_ID": 0, "keywords": null },
+    {
+        "id": 48,
+        "Title": "Супы с рыбой, морепродуктами",
+        "Rank": 45,
+        "ParentCategory_ID": 3,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 49, "Title": "Супы с мясом", "Rank": 50, "ParentCategory_ID": 3, "Language_ID": 1, "keywords": null },
+    {
+        "id": 50,
+        "Title": "Солянки, рассольники",
+        "Rank": 8,
+        "ParentCategory_ID": 3,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 51, "Title": "Щи, борщи", "Rank": 9, "ParentCategory_ID": 3, "Language_ID": 0, "keywords": null },
+    { "id": 53, "Title": "Блюда из картофеля", "Rank": 6, "ParentCategory_ID": 4, "Language_ID": 0, "keywords": null },
+    {
+        "id": 54,
+        "Title": "Пасты, спагетти, лазаньи",
+        "Rank": 7,
+        "ParentCategory_ID": 4,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 55,
+        "Title": "Блюда из овощей, грибов",
+        "Rank": 5,
+        "ParentCategory_ID": 4,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 56,
+        "Title": "Пловы, паэльи, ризотто",
+        "Rank": 4,
+        "ParentCategory_ID": 4,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 57,
+        "Title": "Каши, блюда из круп, бобовых",
+        "Rank": 3,
+        "ParentCategory_ID": 4,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 58,
+        "Title": "Вареники, пельмени, манты",
+        "Rank": 2,
+        "ParentCategory_ID": 4,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 60, "Title": "Блюда из свинины", "Rank": 13, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    { "id": 61, "Title": "Блюда из говядины", "Rank": 10, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    { "id": 62, "Title": "Блюда из баранины", "Rank": 3, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    { "id": 63, "Title": "Блюда из кролика", "Rank": 2, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    {
+        "id": 64,
+        "Title": "Другие мясные блюда",
+        "Rank": 1,
+        "ParentCategory_ID": 13,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 66, "Title": "Жареная рыба", "Rank": 3, "ParentCategory_ID": 5, "Language_ID": 1, "keywords": null },
+    { "id": 67, "Title": "Запеченная рыба ", "Rank": 20, "ParentCategory_ID": 5, "Language_ID": 1, "keywords": null },
+    { "id": 68, "Title": "Маринованная рыба", "Rank": 2, "ParentCategory_ID": 5, "Language_ID": 1, "keywords": null },
+    { "id": 70, "Title": "Салаты с мясом", "Rank": 30, "ParentCategory_ID": 1, "Language_ID": 1, "keywords": null },
+    { "id": 71, "Title": "Овощные салаты", "Rank": 10, "ParentCategory_ID": 1, "Language_ID": 0, "keywords": null },
+    {
+        "id": 72,
+        "Title": "Блины, оладьи с несладкой начинкой",
+        "Rank": 14,
+        "ParentCategory_ID": 8,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 73,
+        "Title": "Блины, оладьи со сладкой начинкой",
+        "Rank": 10,
+        "ParentCategory_ID": 8,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 75, "Title": "Сырники", "Rank": 1, "ParentCategory_ID": 8, "Language_ID": 1, "keywords": null },
+    { "id": 76, "Title": "Пиццы", "Rank": 6, "ParentCategory_ID": 7, "Language_ID": 0, "keywords": null },
+    { "id": 77, "Title": "Пироги с начинкой", "Rank": 5, "ParentCategory_ID": 7, "Language_ID": 1, "keywords": null },
+    { "id": 78, "Title": "Хлеб, лепешки", "Rank": 3, "ParentCategory_ID": 7, "Language_ID": 0, "keywords": null },
+    { "id": 80, "Title": "Кексы, маффины", "Rank": 2, "ParentCategory_ID": 7, "Language_ID": 1, "keywords": null },
+    { "id": 84, "Title": "Печенье", "Rank": 2, "ParentCategory_ID": 6, "Language_ID": 0, "keywords": null },
+    {
+        "id": 85,
+        "Title": "Булочки, пирожки, пончики",
+        "Rank": 4,
+        "ParentCategory_ID": 6,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 86, "Title": "Хлеб, куличи", "Rank": 5, "ParentCategory_ID": 6, "Language_ID": 1, "keywords": null },
+    { "id": 87, "Title": "Пирожные", "Rank": 15, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 88, "Title": "Пироги, тарты", "Rank": 6, "ParentCategory_ID": 6, "Language_ID": 0, "keywords": null },
+    {
+        "id": 89,
+        "Title": "Кексы, маффины, капкейки",
+        "Rank": 3,
+        "ParentCategory_ID": 6,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 90, "Title": "Торты", "Rank": 4, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 91, "Title": "Чизкейки", "Rank": 2, "ParentCategory_ID": 9, "Language_ID": 1, "keywords": null },
+    { "id": 92, "Title": "Рулеты", "Rank": 9, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 93, "Title": "Мороженое", "Rank": 40, "ParentCategory_ID": 10, "Language_ID": 0, "keywords": null },
+    { "id": 94, "Title": "Желейные десерты", "Rank": 30, "ParentCategory_ID": 10, "Language_ID": 0, "keywords": null },
+    {
+        "id": 95,
+        "Title": "Кремы, муссы, пасты",
+        "Rank": 1,
+        "ParentCategory_ID": 10,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 97, "Title": "Конфеты", "Rank": 4, "ParentCategory_ID": 10, "Language_ID": 0, "keywords": null },
+    {
+        "id": 98,
+        "Title": "Фруктовые, ягодные десерты",
+        "Rank": 50,
+        "ParentCategory_ID": 10,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 100,
+        "Title": "Кофе, чай, горячий шоколад",
+        "Rank": 8,
+        "ParentCategory_ID": 15,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 101,
+        "Title": "Безалкогольные напитки, коктейли",
+        "Rank": 10,
+        "ParentCategory_ID": 15,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 102,
+        "Title": "Алкогольные напитки, коктейли",
+        "Rank": 9,
+        "ParentCategory_ID": 15,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 103,
+        "Title": "Блины, оладьи без начинки",
+        "Rank": 5,
+        "ParentCategory_ID": 8,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 104, "Title": "Соусы, заправки", "Rank": 123, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    { "id": 106, "Title": "Блюда из курицы", "Rank": 20, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    { "id": 107, "Title": "Блюда из утки", "Rank": 18, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    { "id": 108, "Title": "Блюда из индейки", "Rank": 16, "ParentCategory_ID": 13, "Language_ID": 1, "keywords": null },
+    {
+        "id": 109,
+        "Title": "Блюда из телятины",
+        "Rank": 11,
+        "ParentCategory_ID": 13,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 110,
+        "Title": "Рыбные котлеты, отбивные",
+        "Rank": 1,
+        "ParentCategory_ID": 5,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 111,
+        "Title": "Другие рыбные блюда",
+        "Rank": 0,
+        "ParentCategory_ID": 5,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 112, "Title": "Запеканки, жюльены", "Rank": 0, "ParentCategory_ID": 4, "Language_ID": 0, "keywords": null },
+    { "id": 113, "Title": "Грибные супы", "Rank": 35, "ParentCategory_ID": 3, "Language_ID": 0, "keywords": null },
+    {
+        "id": 115,
+        "Title": "Супы с крупами, бобовыми",
+        "Rank": 30,
+        "ParentCategory_ID": 3,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 116, "Title": "Салаты с грибами", "Rank": 20, "ParentCategory_ID": 1, "Language_ID": 0, "keywords": null },
+    { "id": 118, "Title": "Слоеные салаты", "Rank": 40, "ParentCategory_ID": 1, "Language_ID": 0, "keywords": null },
+    {
+        "id": 119,
+        "Title": "Салаты с рыбой, морепродуктами",
+        "Rank": 25,
+        "ParentCategory_ID": 1,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 120, "Title": "Пирожки, булочки", "Rank": 0, "ParentCategory_ID": 7, "Language_ID": 0, "keywords": null },
+    { "id": 121, "Title": "Крекеры, палочки", "Rank": 0, "ParentCategory_ID": 7, "Language_ID": 1, "keywords": null },
+    {
+        "id": 122,
+        "Title": "Овощные блины, оладьи",
+        "Rank": 20,
+        "ParentCategory_ID": 8,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 123, "Title": "Сладкие запеканки", "Rank": 0, "ParentCategory_ID": 6, "Language_ID": 1, "keywords": null },
+    { "id": 124, "Title": "Закуски в лаваше", "Rank": 38, "ParentCategory_ID": 2, "Language_ID": 0, "keywords": null },
+    { "id": 125, "Title": "Брауни", "Rank": 11, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 130, "Title": "Шоколадные торты", "Rank": 3, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 131, "Title": "Торты без выпечки", "Rank": 0, "ParentCategory_ID": 9, "Language_ID": 0, "keywords": null },
+    { "id": 132, "Title": "Блинные торты", "Rank": 9, "ParentCategory_ID": 8, "Language_ID": 0, "keywords": null },
+    {
+        "id": 134,
+        "Title": "Творожные десерты",
+        "Rank": 42,
+        "ParentCategory_ID": 10,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    {
+        "id": 135,
+        "Title": "Батончики, помадки",
+        "Rank": 2,
+        "ParentCategory_ID": 10,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    { "id": 137, "Title": "Пудинги, суфле", "Rank": 47, "ParentCategory_ID": 10, "Language_ID": 0, "keywords": null },
+    {
+        "id": 138,
+        "Title": "Безе, зефир, меренги",
+        "Rank": 8,
+        "ParentCategory_ID": 10,
+        "Language_ID": 1,
+        "keywords": null
+    },
+    { "id": 141, "Title": "Заготовки", "Rank": 122, "ParentCategory_ID": 0, "Language_ID": 1, "keywords": null },
+    {
+        "id": 142,
+        "Title": "Варенья, джемы, конфитюры",
+        "Rank": 1,
+        "ParentCategory_ID": 141,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 143,
+        "Title": "Консервирование, соление, маринование",
+        "Rank": 5,
+        "ParentCategory_ID": 141,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 156,
+        "Title": "Украшение, подача, сервировка блюд",
+        "Rank": 9,
+        "ParentCategory_ID": 12,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 157,
+        "Title": "Полезные свойства продуктов",
+        "Rank": 7,
+        "ParentCategory_ID": 12,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 158,
+        "Title": "Кулинарные советы и рекомендации",
+        "Rank": 5,
+        "ParentCategory_ID": 12,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 159,
+        "Title": "Юмор, креатив, необычные вещи",
+        "Rank": 3,
+        "ParentCategory_ID": 12,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 160,
+        "Title": "Национальные кухни мира",
+        "Rank": null,
+        "ParentCategory_ID": 0,
+        "Language_ID": 0,
+        "keywords": null
+    },
+    {
+        "id": 161,
+        "Title": "Английская кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 0,
+        "keywords": "англ,овсяная каша,пудинг,девоншир,британ,лондон,бирмингем,шотлан,пунш,ростбиф"
+    },
+    {
+        "id": 162,
+        "Title": "Итальянская кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 0,
+        "keywords": "италь,пицца,паста,ризотто,лазанья,фокачча,тоскан,флорент"
+    },
+    {
+        "id": 163,
+        "Title": "Французская кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 0,
+        "keywords": "устриц,франц,багет,круассан,луковый,париж,пармезан,марсель,бордо,беарн,фламбе"
+    },
+    {
+        "id": 164,
+        "Title": "Немецкая кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 1,
+        "keywords": "немец,бавар,айнтопф,берлин,саксон,щницель,штрудель,штоллен,гамбург,мюнхен"
+    },
+    {
+        "id": 165,
+        "Title": "Японская кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 0,
+        "keywords": "тофу,япон,васаби,суши,ролл,мисо,тамаго,воки,терияки,дзос,суси"
+    },
+    {
+        "id": 166,
+        "Title": "Латиноамериканская кухня",
+        "Rank": null,
+        "ParentCategory_ID": 160,
+        "Language_ID": 1,
+        "keywords": "испан,мексик,латин,бразил,буррит,текил,гуако,тортиль,паэлья,андалу,мадрид,барселон,каталон"
+    }
+]
