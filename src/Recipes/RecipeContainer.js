@@ -2,6 +2,7 @@ import React from "react";
 import RecipeCard from "./RecipeCard";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
+import recipes from "../db/recipes2.json";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,15 +15,14 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipesContainer = () => {
     const classes = useStyles();
-    const { data } = useSWR(`https://restcountries.eu/rest/v2/all`, fetcher);
-
-    return data ? (
+    console.log(recipes);
+    return (
         <Container component="main" maxWidth="lg" className={classes.root}>
-            {data.map((country) => {
-                return <RecipeCard key={country.numericCode} country={country} />;
+            {recipes.map((recipe) => {
+                return <RecipeCard key={recipe.id} recipe={recipe} />;
             })}
         </Container>
-    ) : null;
+    );
 };
 
 export default RecipesContainer;

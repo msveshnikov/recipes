@@ -28,37 +28,38 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const RecipeCard = ({ country }) => {
+const RecipeCard = ({ recipe }) => {
     const classes = useStyles();
 
+    console.log(recipe);
     return (
         <Card className={classes.card}>
-            <Link
+            {/* <Link
                 className={classes.actionArea}
                 rel="noopener noreferrer"
                 target="_blank"
-                href={"https://en.wikipedia.org/wiki/" + country.name}
-            >
-                <CardMedia className={classes.media} image={country.flag} />
-                <CardContent>
-                    <Typography gutterBottom variant="h4">
-                        {country.name}
-                    </Typography>
-                    <br />
-                    <Typography variant="h6" color="textSecondary">
-                        <strong>Capital:</strong>
-                    </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        {country.capital}
-                    </Typography>
-                    <br />
-                    <Typography variant="h6">
+                href={"https://en.wikipedia.org/wiki/" + recipe.name}
+            > */}
+            <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src} />
+            <CardContent>
+                <Typography gutterBottom variant="h4">
+                    {recipe.Title}
+                </Typography>
+                <br />
+                <Typography variant="h6" color="textSecondary">
+                    <strong>Author:</strong>
+                </Typography>
+                <Typography variant="subtitle1" color="textSecondary">
+                    {recipe.RecipeAuthor}
+                </Typography>
+                <br />
+                {/* <Typography variant="h6">
                         <strong>Region:</strong>
                     </Typography>
-                    <Typography>{country.region}</Typography>
-                    <br />
-                </CardContent>
-            </Link>
+                    <Typography>{recipe.region}</Typography> */}
+                <br />
+            </CardContent>
+            {/* </Link> */}
         </Card>
     );
 };
