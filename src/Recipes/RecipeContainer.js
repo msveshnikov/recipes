@@ -1,7 +1,9 @@
 import RecipeCard from "./RecipeCard";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import recipes from "../db/recipes2.json";
+import recipes from "../db/recipes.json";
+import Pagination from "@material-ui/lab/Pagination";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -14,12 +16,27 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipesContainer = () => {
     const classes = useStyles();
+    const PAGE_SIZE = 9;
+    const [page, setPage] = useState(1);
+    const handleChange = (event, value) => {
+        setPage(value);
+    };
+
     return (
-        <Container component="main" maxWidth="lg" className={classes.root}>
-            {recipes.map((recipe) => {
-                return <RecipeCard key={recipe.id} recipe={recipe} />;
-            })}
-        </Container>
+        <div>
+            <Container component="main" maxWidth="lg" className={classes.root}>
+                {recipes.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE).map((recipe) => {
+                    return <RecipeCard key={recipe.id} recipe={recipe} />;
+                })}
+            </Container>
+            <br />
+            <Pagination
+                color="secondary"
+                count={Math.floor(recipes.length / PAGE_SIZE) + 1}
+                page={page}
+                onChange={handleChange}
+            />
+        </div>
     );
 };
 

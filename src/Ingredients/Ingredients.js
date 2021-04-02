@@ -20,7 +20,7 @@ const Ingredients = (props) => {
         <Paper className={classes.paper}>
             <Typography variant="h5">Ингредиенты:</Typography>
             {props.ingredients.map((p) => (
-                <Typography variant="subtitle2" key={p.id}>
+                <Typography variant="subtitle1" key={p.id}>
                     {ingredients.find((i) => i.id === parseInt(p.id))?.Title} {p.count}{" "}
                     {types.find((t) => t.id === parseInt(p.type))?.title}
                 </Typography>
