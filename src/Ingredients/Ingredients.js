@@ -5,18 +5,19 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
-        backgroundColor: "#ffc" ,
+        backgroundColor: "#ffc",
         flexWrap: "wrap",
         justifyContent: "space-around",
         padding: 10,
-        marginBottom: 30
+        maxWidth: 400,
+        marginBottom: 30,
     },
 }));
 
 const Ingredients = (props) => {
     const classes = useStyles();
     return (
-        <Paper className={classes.paper} >
+        <Paper className={classes.paper}>
             <Typography variant="h5">Ингредиенты:</Typography>
             {props.ingredients.map((p) => (
                 <Typography variant="subtitle2" key={p.id}>
