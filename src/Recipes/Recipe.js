@@ -1,13 +1,12 @@
-import React from "react";
 import { useParams } from "react-router-dom";
 import recipes from "../db/recipes2.json";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
+import Ingredients from "../Ingredients/Ingredients";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        // display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-around",
         backgroundColor: theme.palette.background.paper,
@@ -21,11 +20,12 @@ const Recipe = () => {
     let photos = JSON.parse(recipe?.Media).photos;
     return (
         <Container component="main" maxWidth="md" className={classes.root}>
+            <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0].childs} />
             {recipe.isStepPhoto ? (
                 photos.map((p, index) => (
                     <div key={index}>
                         <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
-                        <img style={{ marginTop: "15px" }} width="100%" src={p.src} alt="" />
+                        <img style={{ marginTop: "15px", marginBottom: "15px" }} width="100%" src={p.src} alt="" />
                     </div>
                 ))
             ) : (
