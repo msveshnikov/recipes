@@ -1,12 +1,7 @@
-import "./App.css";
 import RecipesContainer from "./Recipes/RecipeContainer";
 
 function App() {
-    return (
-        <div className="App">
-            <RecipesContainer />
-        </div>
-    );
+    return <RecipesContainer />;
 }
 
 export default App;
