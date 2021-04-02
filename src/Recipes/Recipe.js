@@ -24,19 +24,13 @@ const Recipe = () => {
             {recipe.isStepPhoto ? (
                 photos.map((p, index) => (
                     <div key={index}>
-                        <Typography
-                            dangerouslySetInnerHTML={{
-                                __html: p.text_ru,
-                            }}
-                        ></Typography>
-
+                        <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
                         <img style={{ marginTop: "15px" }} width="100%" src={p.src} alt="" />
                     </div>
                 ))
             ) : (
                 <>
-                    <Typography dangerouslySetInnerHTML={{ __html: recipe.Description }}></Typography>
-
+                    <Typography dangerouslySetInnerHTML={{ __html: recipe.Description }} />
                     <img style={{ marginTop: "15px" }} width="100%" src={photos[0].src} alt="" />
                 </>
             )}

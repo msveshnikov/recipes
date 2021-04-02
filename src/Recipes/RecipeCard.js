@@ -41,15 +41,16 @@ const RecipeCard = ({ recipe }) => {
                     <Typography gutterBottom variant="h4">
                         {recipe.Title}
                     </Typography>
-                    <br />
-                    <Typography variant="h6" color="textSecondary">
-                        <strong>Author:</strong>
-                    </Typography>
-                    <Typography variant="subtitle1" color="textSecondary">
-                        {recipe.RecipeAuthor}
-                    </Typography>
-                    <br />
-                    <br />
+                    {recipe.RecipeAuthor && (
+                        <>
+                            <Typography variant="h6" color="textSecondary">
+                                <strong>Автор:</strong>
+                            </Typography>
+                            <Typography variant="subtitle1" color="textSecondary">
+                                {recipe.RecipeAuthor}
+                            </Typography>
+                        </>
+                    )}
                 </CardContent>
             </Link>
         </Card>
