@@ -4,7 +4,8 @@ import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
-// import Link from "@material-ui/core/Link";
+import Link from "@material-ui/core/Link";
+import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     media: {
@@ -25,41 +26,32 @@ const useStyles = makeStyles((theme) => ({
         "&:hover, &:focus, &:visited, &:link, &:active": {
             textDecoration: "none",
         },
+        color: "gray",
     },
 }));
 
 const RecipeCard = ({ recipe }) => {
     const classes = useStyles();
 
-    console.log(recipe);
     return (
         <Card className={classes.card}>
-            {/* <Link
-                className={classes.actionArea}
-                rel="noopener noreferrer"
-                target="_blank"
-                href={"https://en.wikipedia.org/wiki/" + recipe.name}
-            > */}
-            <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src} />
-            <CardContent>
-                <Typography gutterBottom variant="h4">
-                    {recipe.Title}
-                </Typography>
-                <br />
-                <Typography variant="h6" color="textSecondary">
-                    <strong>Author:</strong>
-                </Typography>
-                <Typography variant="subtitle1" color="textSecondary">
-                    {recipe.RecipeAuthor}
-                </Typography>
-                <br />
-                {/* <Typography variant="h6">
-                        <strong>Region:</strong>
+            <Link component={RouterLink} to={"/recipe/" + recipe.id} className={classes.actionArea}>
+                <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src} />
+                <CardContent>
+                    <Typography gutterBottom variant="h4">
+                        {recipe.Title}
                     </Typography>
-                    <Typography>{recipe.region}</Typography> */}
-                <br />
-            </CardContent>
-            {/* </Link> */}
+                    <br />
+                    <Typography variant="h6" color="textSecondary">
+                        <strong>Author:</strong>
+                    </Typography>
+                    <Typography variant="subtitle1" color="textSecondary">
+                        {recipe.RecipeAuthor}
+                    </Typography>
+                    <br />
+                    <br />
+                </CardContent>
+            </Link>
         </Card>
     );
 };

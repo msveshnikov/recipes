@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipesContainer = () => {
     const classes = useStyles();
-    console.log(recipes);
     return (
         <Container component="main" maxWidth="lg" className={classes.root}>
             {recipes.map((recipe) => {
