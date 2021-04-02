@@ -1,7 +1,7 @@
 import RecipeCard from "./RecipeCard";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import recipes from "../db/recipes.json";
+import recipes from "../db/recipes2.json";
 import Pagination from "@material-ui/lab/Pagination";
 import { useState } from "react";
 
