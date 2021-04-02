@@ -7,7 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: "flex",
+        // display: "flex",
         flexWrap: "wrap",
         justifyContent: "space-around",
         backgroundColor: theme.palette.background.paper,
@@ -29,10 +29,10 @@ const Recipe = () => {
                     </div>
                 ))
             ) : (
-                <>
+                <div>
                     <Typography dangerouslySetInnerHTML={{ __html: recipe.Description }} />
                     <img style={{ marginTop: "15px" }} width="100%" src={photos[0].src} alt="" />
-                </>
+                </div>
             )}
         </Container>
     );
