@@ -1,5 +1,4 @@
 import { useParams } from "react-router-dom";
-import recipes from "../db/recipes2.json";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
@@ -7,6 +6,7 @@ import Ingredients from "../Ingredients/Ingredients";
 import Carousel from "react-material-ui-carousel";
 import Step from "./Step";
 import { useEffect } from "react";
+import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,16 +18,26 @@ const useStyles = makeStyles((theme) => ({
 
 const Recipe = () => {
     const classes = useStyles();
-    let { id } = useParams();
-    let recipe = recipes.find((r) => r.id === parseInt(id));
-    let photos = JSON.parse(recipe?.Media).photos;
+    let { category, id } = useParams();
+    const [recipes, setRecipes] = useState();
+    if (category) {
+        import("../db/" + category + ".json").then((json) => {
+            setRecipes(json.default);
+        });
+    }
+
+    let recipe = recipes?.find((r) => r.id === parseInt(id));
+    let photos;
+    if (recipe) {
+        photos = JSON.parse(recipe?.Media)?.photos;
+    }
     useEffect(() => {
-        if (recipe.isStepPhoto) {
+        if (recipe?.isStepPhoto) {
             cacheImages(photos.map((p) => p.src_big));
         }
-    }, [photos, recipe.isStepPhoto]);
+    }, [photos, recipe?.isStepPhoto]);
 
-    return (
+    return recipe ? (
         <Container component="main" maxWidth="md" className={classes.root}>
             <br />
             <Typography gutterBottom variant="h4">
@@ -53,7 +63,7 @@ const Recipe = () => {
                 <Step photo={photos[0]} title={recipe.Description} />
             )}
         </Container>
-    );
+    ) : null;
 };
 
 const cacheImages = async (srcArray) => {

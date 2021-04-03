@@ -1,8 +1,8 @@
 import RecipeCard from "./RecipeCard";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
-import recipes from "../db/recipes2.json";
-// import FeedAd from "../AdSense/FeedAd";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,14 +15,21 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipesContainer = () => {
     const classes = useStyles();
+    let { category } = useParams();
 
-    return (
+    const [recipes, setRecipes] = useState();
+    if (category) {
+        import("../db/" + category + ".json").then((json) => {
+            setRecipes(json.default);
+        });
+    }
+    return recipes ? (
         <Container component="main" maxWidth="lg" className={classes.root}>
-            {recipes.map((recipe, index) => {
+            {recipes.map((recipe) => {
                 return <RecipeCard key={recipe.id} recipe={recipe} />;
             })}
         </Container>
-    );
+    ) : null;
 };
 
 export default RecipesContainer;

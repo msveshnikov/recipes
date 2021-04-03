@@ -30,43 +30,25 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const RecipeCard = ({ recipe }) => {
+const CategoryCard = ({ category }) => {
     const classes = useStyles();
-
-    const photo = JSON.parse(recipe?.Media).photos?.[0];
 
     return (
         <Card className={classes.card}>
             <Link
                 component={RouterLink}
-                to={"/recipe/" + recipe.subcategory_id + "/" + recipe.id}
+                to={category.ParentCategory_ID === 0 ? "/category/" + category.id : "/recipes/" + category.id}
                 className={classes.actionArea}
             >
-                <CardMedia
-                    className={classes.media}
-                    image={photo.src_big}
-                    onError={(e) => {
-                        e.target.src = photo.src;
-                    }}
-                />
+                <CardMedia className={classes.media} image={category.src_big} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
-                        {recipe.Title}
+                        {category.Title}
                     </Typography>
-                    {recipe.RecipeAuthor && (
-                        <>
-                            <Typography variant="h6" color="textSecondary">
-                                <strong>Автор:</strong>
-                            </Typography>
-                            <Typography variant="subtitle1" color="textSecondary">
-                                {recipe.RecipeAuthor}
-                            </Typography>
-                        </>
-                    )}
                 </CardContent>
             </Link>
         </Card>
     );
 };
 
-export default RecipeCard;
+export default CategoryCard;
