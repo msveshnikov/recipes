@@ -44,7 +44,8 @@ const RecipeCard = ({ recipe }) => {
             >
                 <CardMedia
                     className={classes.media}
-                    image={photo.src_big}
+                    src={photo.src_big}
+                    component="img"
                     onError={(e) => {
                         e.target.src = photo.src;
                     }}
