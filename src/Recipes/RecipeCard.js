@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Card from "@material-ui/core/Card";
@@ -32,17 +32,24 @@ const useStyles = makeStyles((theme) => ({
 
 const RecipeCard = ({ recipe }) => {
     const classes = useStyles();
-
+    const [hidden, setHidden] = useState(false);
     const photo = JSON.parse(recipe?.Media).photos?.[0];
 
-    return (
+    return hidden ? null : (
         <Card className={classes.card}>
             <Link
                 component={RouterLink}
                 to={"/recipe/" + recipe.subcategory_id + "/" + recipe.id}
                 className={classes.actionArea}
             >
-                <CardMedia className={classes.media} image={photo.src_big} />
+                <CardMedia
+                    className={classes.media}
+                    image={photo.src_big}
+                    component="img"
+                    onError={(e) => {
+                        setHidden(true);
+                    }}
+                />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {recipe.Title}
