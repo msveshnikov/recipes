@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Ingredients = (props) => {
     const classes = useStyles();
-    return props.ingredients ? (
+    return props.ingredients?.length > 0 ? (
         <Paper className={classes.paper}>
             <Typography className={classes.title} variant="h5">
                 Ингредиенты:
