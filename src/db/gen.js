@@ -10,7 +10,7 @@ categories.forEach((c) => {
     } else {
         jsonData = recipes.filter((o) => o.category_id === c.id || o.subcategory_id === c.id);
     }
-    if (c.ParentCategory_ID !== 0) {
+    if (c.ParentCategory_ID !== 0 || c.id === 104) {
         fs.writeFile(c.id + ".json", JSON.stringify(jsonData), () => {});
     }
     if (jsonData[0]) {

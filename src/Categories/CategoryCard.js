@@ -37,7 +37,7 @@ const CategoryCard = ({ category }) => {
         <Card className={classes.card}>
             <Link
                 component={RouterLink}
-                to={category.ParentCategory_ID === 0 ? "/category/" + category.id : "/recipes/" + category.id}
+                to={category.ParentCategory_ID === 0 && category.id !== 104 ? "/category/" + category.id : "/recipes/" + category.id}
                 className={classes.actionArea}
             >
                 <CardMedia className={classes.media} image={category.src_big} />
