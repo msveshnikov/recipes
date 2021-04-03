@@ -4,6 +4,18 @@ import App from "./App";
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 import reportWebVitals from "./reportWebVitals";
+import * as Sentry from "@sentry/react";
+import { Integrations } from "@sentry/tracing";
+
+Sentry.init({
+    dsn: "https://11f5e0a8635e43118036c1b0832c50b4@o383246.ingest.sentry.io/5704752",
+    integrations: [new Integrations.BrowserTracing()],
+  
+    // Set tracesSampleRate to 1.0 to capture 100%
+    // of transactions for performance monitoring.
+    // We recommend adjusting this value in production
+    tracesSampleRate: 0.1,
+  });
 
 ReactDOM.render(
     <BrowserRouter>
