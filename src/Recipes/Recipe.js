@@ -6,6 +6,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Ingredients from "../Ingredients/Ingredients";
 import Carousel from "react-material-ui-carousel";
 import Step from "./Step";
+import { useEffect } from "react";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,6 +21,12 @@ const Recipe = () => {
     let { id } = useParams();
     let recipe = recipes.find((r) => r.id === parseInt(id));
     let photos = JSON.parse(recipe?.Media).photos;
+    useEffect(() => {
+        if (recipe.isStepPhoto) {
+            cacheImages(photos.map((p) => p.src_big));
+        }
+    }, [photos, recipe.isStepPhoto]);
+
     return (
         <Container component="main" maxWidth="md" className={classes.root}>
             <br />
@@ -47,6 +54,18 @@ const Recipe = () => {
             )}
         </Container>
     );
+};
+
+const cacheImages = async (srcArray) => {
+    const promises = await srcArray.map((src) => {
+        return new Promise(function (resolve, reject) {
+            const img = new Image();
+            img.src = src;
+            img.onload = resolve();
+            img.onerror = reject();
+        });
+    });
+    await Promise.all(promises);
 };
 
 export default Recipe;
