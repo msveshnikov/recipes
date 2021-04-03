@@ -10,7 +10,9 @@ categories.forEach((c) => {
     } else {
         jsonData = recipes.filter((o) => o.category_id === c.id || o.subcategory_id === c.id);
     }
-    fs.writeFile(c.id + ".json", JSON.stringify(jsonData), () => {});
+    if (c.ParentCategory_ID !== 0) {
+        fs.writeFile(c.id + ".json", JSON.stringify(jsonData), () => {});
+    }
     if (jsonData[0]) {
         const photo = JSON.parse(jsonData[0].Media).photos[0];
         c.src_big = photo.src_big;
