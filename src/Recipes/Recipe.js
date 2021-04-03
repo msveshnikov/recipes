@@ -5,6 +5,7 @@ import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Ingredients from "../Ingredients/Ingredients";
 import Carousel from "react-material-ui-carousel";
+import Step from "./Step";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,19 +29,21 @@ const Recipe = () => {
             <br />
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0]?.childs} />
             {recipe.isStepPhoto ? (
-                <Carousel animation="slide" navButtonsAlwaysVisible="true" cycleNavigation="false">
-                    {photos.map((p, index) => (
-                        <div key={index}>
-                            <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
-                            <img style={{ marginTop: "15px"}} width="100%" src={p.src_big} alt="" />
-                        </div>
+                <Carousel
+                    navButtonsProps={{
+                        style: {
+                            backgroundColor: "gray",
+                        },
+                    }}
+                    animation="slide"
+                    navButtonsAlwaysVisible="true"
+                >
+                    {photos.map((p) => (
+                        <Step photo={p} title={p.text_ru} />
                     ))}
                 </Carousel>
             ) : (
-                <div>
-                    <Typography dangerouslySetInnerHTML={{ __html: recipe.Description }} />
-                    <img style={{ marginTop: "15px" }} width="100%" src={photos[0].src_big} alt="" />
-                </div>
+                <Step photo={photos[0]} title={recipe.Description} />
             )}
         </Container>
     );
