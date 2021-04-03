@@ -28,11 +28,11 @@ const Recipe = () => {
             <br />
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0]?.childs} />
             {recipe.isStepPhoto ? (
-                <Carousel>
+                <Carousel animation="slide" navButtonsAlwaysVisible="true" cycleNavigation="false">
                     {photos.map((p, index) => (
                         <div key={index}>
                             <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
-                            <img style={{ marginTop: "15px", marginBottom: "15px" }} width="100%" src={p.src_big} alt="" />
+                            <img style={{ marginTop: "15px"}} width="100%" src={p.src_big} alt="" />
                         </div>
                     ))}
                 </Carousel>
