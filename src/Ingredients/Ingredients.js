@@ -2,6 +2,7 @@ import ingredients from "../db/ingredients.json";
 import types from "../db/types.json";
 import { Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
+import { Fragment } from "react";
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -23,8 +24,8 @@ const Ingredients = (props) => {
                 Ингредиенты:
             </Typography>
             {props.ingredients.map((t) => (
-                <>
-                    <Typography variant="subtitle1" key={t.name}>
+                <Fragment key={t.name}>
+                    <Typography variant="subtitle1">
                         <b>{t.name}</b>
                     </Typography>
                     {t.childs.map((p) => (
@@ -33,7 +34,7 @@ const Ingredients = (props) => {
                             {types.find((t) => t.id === parseInt(p.type))?.title}
                         </Typography>
                     ))}
-                </>
+                </Fragment>
             ))}
         </Paper>
     ) : null;

@@ -1,6 +1,7 @@
 let recipes = require("../db/recipes.json");
 let categories = require("../db/categories.json");
 var fs = require("fs");
+let total = 0;
 
 categories.forEach((c) => {
     let jsonData;
@@ -10,7 +11,20 @@ categories.forEach((c) => {
     } else {
         jsonData = recipes.filter((o) => o.category_id === c.id || o.subcategory_id === c.id);
     }
+
+    // bad images CDNs
+    jsonData = jsonData.filter((c) => !c.Media.includes("v540103905"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v409216865"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v540103427"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v7005958"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v614727171"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v619816852"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v322829554"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v322519554"));
+    
+
     if (c.ParentCategory_ID !== 0 || c.id === 104) {
+        total += jsonData.length;
         fs.writeFile(c.id + ".json", JSON.stringify(jsonData), () => {});
     }
     if (jsonData[0]) {
@@ -22,4 +36,5 @@ categories.forEach((c) => {
     }
 });
 
+console.log(total);
 fs.writeFile("cats.json", JSON.stringify(categories), () => {});

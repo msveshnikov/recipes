@@ -42,14 +42,7 @@ const RecipeCard = ({ recipe }) => {
                 to={"/recipe/" + recipe.subcategory_id + "/" + recipe.id}
                 className={classes.actionArea}
             >
-                <CardMedia
-                    className={classes.media}
-                    image={photo.src_big}
-                    // component="img"
-                    // onError={(e) => {
-                    //     e.target.src = photo.src;
-                    // }}
-                />
+                <CardMedia className={classes.media} image={photo.src_big} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {recipe.Title}

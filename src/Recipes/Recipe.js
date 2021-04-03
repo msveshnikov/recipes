@@ -56,7 +56,7 @@ const Recipe = () => {
                     navButtonsAlwaysVisible="true"
                 >
                     {photos.map((p) => (
-                        <Step photo={p} title={p.text_ru} />
+                        <Step key={p.photo_id}  photo={p} title={p.text_ru} />
                     ))}
                 </Carousel>
             ) : (
