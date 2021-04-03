@@ -1,12 +1,10 @@
-[
-    {
-        "relation": ["delegate_permission/common.handle_all_urls"],
-        "target": {
-            "namespace": "android_app",
-            "package_name": "club.mycooks.twa",
-            "sha256_cert_fingerprints": [
-                "46:C4:45:59:76:49:9D:63:27:A6:DA:F8:AD:23:52:F5:B4:32:37:94:64:08:16:15:60:36:9F:46:BA:E7:57:9B"
-            ]
-        }
-    }
-]
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "club.mycooks.twa",
+    "sha256_cert_fingerprints": [
+      "9B:F7:86:58:B1:F2:9C:BE:70:67:DD:E0:74:29:1E:94:51:C1:B8:26:05:3E:CC:4E:02:89:B7:CB:6A:CC:A2:DE"
+    ]
+  }
+}]
