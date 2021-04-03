@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import Ingredients from "../Ingredients/Ingredients";
+import Carousel from "react-material-ui-carousel";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,19 +21,21 @@ const Recipe = () => {
     let photos = JSON.parse(recipe?.Media).photos;
     return (
         <Container component="main" maxWidth="md" className={classes.root}>
-            <br/>
+            <br />
             <Typography gutterBottom variant="h4">
                 {recipe.Title}
             </Typography>
-            <br/>
+            <br />
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0]?.childs} />
             {recipe.isStepPhoto ? (
-                photos.map((p, index) => (
-                    <div key={index}>
-                        <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
-                        <img style={{ marginTop: "15px", marginBottom: "15px" }} width="100%" src={p.src} alt="" />
-                    </div>
-                ))
+                <Carousel>
+                    {photos.map((p, index) => (
+                        <div key={index}>
+                            <Typography dangerouslySetInnerHTML={{ __html: p.text_ru }} />
+                            <img style={{ marginTop: "15px", marginBottom: "15px" }} width="100%" src={p.src} alt="" />
+                        </div>
+                    ))}
+                </Carousel>
             ) : (
                 <div>
                     <Typography dangerouslySetInnerHTML={{ __html: recipe.Description }} />
