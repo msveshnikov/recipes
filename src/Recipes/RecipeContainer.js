@@ -2,6 +2,7 @@ import RecipeCard from "./RecipeCard";
 import Container from "@material-ui/core/Container";
 import { makeStyles } from "@material-ui/core/styles";
 import recipes from "../db/recipes2.json";
+// import FeedAd from "../AdSense/FeedAd";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -17,7 +18,7 @@ const RecipesContainer = () => {
 
     return (
         <Container component="main" maxWidth="lg" className={classes.root}>
-            {recipes.map((recipe) => {
+            {recipes.map((recipe, index) => {
                 return <RecipeCard key={recipe.id} recipe={recipe} />;
             })}
         </Container>
