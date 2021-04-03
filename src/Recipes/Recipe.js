@@ -20,7 +20,12 @@ const Recipe = () => {
     let photos = JSON.parse(recipe?.Media).photos;
     return (
         <Container component="main" maxWidth="md" className={classes.root}>
-            <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0].childs} />
+            <br/>
+            <Typography gutterBottom variant="h4">
+                {recipe.Title}
+            </Typography>
+            <br/>
+            <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0]?.childs} />
             {recipe.isStepPhoto ? (
                 photos.map((p, index) => (
                     <div key={index}>

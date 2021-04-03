@@ -6,19 +6,22 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
     paper: {
         backgroundColor: "#ffc",
-        flexWrap: "wrap",
-        justifyContent: "space-around",
         padding: 10,
         maxWidth: 400,
         marginBottom: 30,
+    },
+    title: {
+        marginBottom: 20,
     },
 }));
 
 const Ingredients = (props) => {
     const classes = useStyles();
-    return (
+    return props.ingredients ? (
         <Paper className={classes.paper}>
-            <Typography variant="h5">Ингредиенты:</Typography>
+            <Typography className={classes.title} variant="h5">
+                Ингредиенты:
+            </Typography>
             {props.ingredients.map((p) => (
                 <Typography variant="subtitle1" key={p.id}>
                     {ingredients.find((i) => i.id === parseInt(p.id))?.Title} {p.count}{" "}
@@ -26,7 +29,7 @@ const Ingredients = (props) => {
                 </Typography>
             ))}
         </Paper>
-    );
+    ) : null;
 };
 
 export default Ingredients;
