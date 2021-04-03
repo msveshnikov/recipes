@@ -33,10 +33,18 @@ const useStyles = makeStyles((theme) => ({
 const RecipeCard = ({ recipe }) => {
     const classes = useStyles();
 
+    const photo = JSON.parse(recipe?.Media).photos?.[0];
+
     return (
         <Card className={classes.card}>
             <Link component={RouterLink} to={"/recipe/" + recipe.id} className={classes.actionArea}>
-                <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src_big} />
+                <CardMedia
+                    className={classes.media}
+                    image={photo.src_big}
+                    onError={(e) => {
+                        e.target.src = photo.src;
+                    }}
+                />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {recipe.Title}

@@ -1,0 +1,12 @@
+[
+    {
+        "relation": ["delegate_permission/common.handle_all_urls"],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "club.mycooks.twa",
+            "sha256_cert_fingerprints": [
+                "46:C4:45:59:76:49:9D:63:27:A6:DA:F8:AD:23:52:F5:B4:32:37:94:64:08:16:15:60:36:9F:46:BA:E7:57:9B"
+            ]
+        }
+    }
+]
