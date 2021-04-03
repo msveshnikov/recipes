@@ -44,7 +44,7 @@ const Recipe = () => {
                 {recipe.Title}
             </Typography>
             <br />
-            <Ingredients ingredients={JSON.parse(recipe.Ingredients)?.[0]?.childs} />
+            <Ingredients ingredients={JSON.parse(recipe.Ingredients)} />
             {recipe.isStepPhoto ? (
                 <Carousel
                     navButtonsProps={{

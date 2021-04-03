@@ -8,9 +8,9 @@ const Step = ({ photo, title }) => (
             style={{ marginTop: "15px" }}
             width="100%"
             src={photo.src_big}
-            onError={(e) => {
-                e.target.src = photo.src;
-            }}
+            // onError={(e) => {
+            //     e.target.src = photo.src;
+            // }}
             alt=""
         />
     </div>

@@ -44,11 +44,11 @@ const RecipeCard = ({ recipe }) => {
             >
                 <CardMedia
                     className={classes.media}
-                    src={photo.src_big}
-                    component="img"
-                    onError={(e) => {
-                        e.target.src = photo.src;
-                    }}
+                    image={photo.src_big}
+                    // component="img"
+                    // onError={(e) => {
+                    //     e.target.src = photo.src;
+                    // }}
                 />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
