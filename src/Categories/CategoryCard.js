@@ -38,7 +38,7 @@ const CategoryCard = ({ category }) => {
             <Link
                 component={RouterLink}
                 to={
-                    category.ParentCategory_ID === 0 && category.id !== 104
+                    category.ParentCategory_ID === 0 && category.id !== 104 && category.id !== 14
                         ? "/category/" + category.id
                         : "/recipes/" + category.id
                 }

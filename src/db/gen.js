@@ -23,7 +23,7 @@ categories.forEach((c) => {
     jsonData = jsonData.filter((c) => !c.Media.includes("v322519554"));
     
 
-    if (c.ParentCategory_ID !== 0 || c.id === 104) {
+    if (c.ParentCategory_ID !== 0 || c.id === 104 || c.id===14) {
         total += jsonData.length;
         fs.writeFile(c.id + ".json", JSON.stringify(jsonData), () => {});
     }
