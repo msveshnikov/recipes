@@ -36,7 +36,7 @@ const RecipeCard = ({ recipe }) => {
     return (
         <Card className={classes.card}>
             <Link component={RouterLink} to={"/recipe/" + recipe.id} className={classes.actionArea}>
-                <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src} />
+                <CardMedia className={classes.media} image={JSON.parse(recipe?.Media).photos?.[0].src_big} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {recipe.Title}
