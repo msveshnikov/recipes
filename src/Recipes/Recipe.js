@@ -5,7 +5,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import Ingredients from "../Ingredients/Ingredients";
 import Carousel from "react-material-ui-carousel";
 import Step from "./Step";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
@@ -18,6 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 const Recipe = () => {
     const classes = useStyles();
+    const last = useRef(null);
     let { category, id } = useParams();
     const [recipes, setRecipes] = useState();
     if (category) {
@@ -47,21 +48,27 @@ const Recipe = () => {
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)} />
             {recipe.isStepPhoto ? (
                 <Carousel
+                    onChange={() => {
+                        last.current.scrollIntoView({ block: "end", behavior: "smooth" });
+                    }}
                     navButtonsProps={{
                         style: {
                             backgroundColor: "gray",
                         },
                     }}
                     animation="slide"
+                    
+                    cycleNavigation="false"
                     navButtonsAlwaysVisible="true"
                 >
                     {photos.map((p) => (
-                        <Step key={p.photo_id}  photo={p} title={p.text_ru} />
+                        <Step key={p.photo_id} photo={p} title={p.text_ru} />
                     ))}
                 </Carousel>
             ) : (
                 <Step photo={photos[0]} title={recipe.Description} />
             )}
+            <div ref={last}></div>
         </Container>
     ) : null;
 };
