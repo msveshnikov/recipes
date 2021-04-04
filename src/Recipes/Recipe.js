@@ -21,6 +21,7 @@ const Recipe = () => {
     const last = useRef(null);
     let { category, id } = useParams();
     const [recipes, setRecipes] = useState();
+    const [auto, setAuto] = useState(true);
     if (category) {
         import("../db/" + category + ".json").then((json) => {
             setRecipes(json.default);
@@ -45,24 +46,36 @@ const Recipe = () => {
                 {recipe.Title}
             </Typography>
             <br />
-            <Ingredients ingredients={JSON.parse(recipe.Ingredients)} />
+            <Ingredients
+                onClick={() => {
+                    setAuto(false);
+                }}
+                ingredients={JSON.parse(recipe.Ingredients)}
+            />
             {recipe.isStepPhoto ? (
                 <Carousel
                     onChange={() => {
                         last.current.scrollIntoView({ block: "end", behavior: "smooth" });
                     }}
+                    autoPlay={auto}
                     navButtonsProps={{
                         style: {
                             backgroundColor: "gray",
                         },
                     }}
                     animation="slide"
-                    
                     cycleNavigation="false"
                     navButtonsAlwaysVisible="true"
                 >
                     {photos.map((p) => (
-                        <Step key={p.photo_id} photo={p} title={p.text_ru} />
+                        <Step
+                            onClick={() => {
+                                setAuto(false);
+                            }}
+                            key={p.photo_id}
+                            photo={p}
+                            title={p.text_ru}
+                        />
                     ))}
                 </Carousel>
             ) : (

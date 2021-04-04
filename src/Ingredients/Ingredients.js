@@ -4,7 +4,7 @@ import { Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Fragment } from "react";
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     paper: {
         backgroundColor: "#ffc",
         padding: 10,
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
 const Ingredients = (props) => {
     const classes = useStyles();
     return props.ingredients?.length > 0 ? (
-        <Paper className={classes.paper}>
+        <Paper onClick={props.onClick} className={classes.paper}>
             <Typography className={classes.title} variant="h5">
                 Ингредиенты:
             </Typography>
