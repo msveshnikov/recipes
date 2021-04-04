@@ -55,7 +55,7 @@ const Recipe = () => {
             {recipe.isStepPhoto ? (
                 <Carousel
                     onChange={() => {
-                        last.current.scrollIntoView({ block: "end", behavior: "smooth" });
+                        last.current.scrollIntoView({ block: "nearest", inline: "start", behavior: "smooth" });
                     }}
                     autoPlay={auto}
                     navButtonsProps={{
@@ -81,7 +81,7 @@ const Recipe = () => {
             ) : (
                 <Step photo={photos[0]} title={recipe.Description} />
             )}
-            <div ref={last}></div>
+            <div ref={last} />
         </Container>
     ) : null;
 };
