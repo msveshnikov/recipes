@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -5,8 +6,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Ingredients from "../Ingredients/Ingredients";
 import Carousel from "react-material-ui-carousel";
 import Step from "./Step";
-import { useEffect, useRef } from "react";
-import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -40,6 +39,7 @@ const Recipe = () => {
     }, [photos, recipe?.isStepPhoto]);
 
     return recipe ? (
+        
         <Container component="main" maxWidth="md" className={classes.root}>
             <br />
             <Typography gutterBottom variant="h4">
@@ -64,7 +64,7 @@ const Recipe = () => {
                         },
                     }}
                     animation="slide"
-                    cycleNavigation="false"
+                    cycleNavigation="true"
                     navButtonsAlwaysVisible="true"
                 >
                     {photos.map((p) => (
