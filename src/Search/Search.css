@@ -1,0 +1,34 @@
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-panel {
+    display: flex;
+}
+
+.searchbox {
+    margin-bottom: 1rem;
+}
+
+.pagination {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.ais-Hits-item {
+    width: 96%;
+}
+
+@media (min-width: 500px) {
+    .ais-Hits-item {
+        width: 46%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .ais-Hits-item {
+        width: 30%;
+    }
+}
