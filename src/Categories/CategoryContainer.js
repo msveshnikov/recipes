@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import cats from "../db/cats.json";
 import FeedAd from "./../AdSense/FeedAd";
 import Header from "./../Header";
+import Footer from "../Footer";
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,8 +29,9 @@ const CategoryContainer = () => {
                     .map((c) => (
                         <CategoryCard key={c.id} category={c} />
                     ))}
-                <FeedAd />
+                {/* <FeedAd /> */}
             </Container>
+            <Footer/>
         </>
     );
 };
