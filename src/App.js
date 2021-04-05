@@ -3,10 +3,11 @@ import RecipesContainer from "./Recipes/RecipeContainer";
 import Recipe from "./Recipes/Recipe";
 import ScrollToTop from "./hoc/ScrollToTop";
 import CategoryContainer from "./Categories/CategoryContainer";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
     return (
-        <div>
+        <BrowserRouter>
             <ScrollToTop />
             <Switch>
                 <Route path="/recipe/:category/:id" component={Recipe} />
@@ -15,7 +16,7 @@ function App() {
                 <Route path="/" exact component={CategoryContainer} />
                 <Redirect to="/" />
             </Switch>
-        </div>
+        </BrowserRouter>
     );
 }
 
