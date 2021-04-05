@@ -39,53 +39,49 @@ const Recipe = () => {
     }, [photos, recipe?.isStepPhoto]);
 
     return recipe ? (
-        <>
-            <Container component="main" maxWidth="md" className={classes.root}>
-                <br />
-                <Typography gutterBottom variant="h4">
-                    {recipe.Title}
-                </Typography>
-                <br />
-                <Ingredients
-                    onClick={() => {
-                        setAuto(false);
+        <Container component="main" maxWidth="md" className={classes.root}>
+            <br />
+            <Typography gutterBottom variant="h4">
+                {recipe.Title}
+            </Typography>
+            <br />
+            <Ingredients
+                onClick={() => {
+                    setAuto(false);
+                }}
+                ingredients={JSON.parse(recipe.Ingredients)}
+            />
+            {recipe.isStepPhoto ? (
+                <Carousel
+                    onChange={() => {
+                        last.current.scrollIntoView({ block: "end", inline: "end", behavior: "smooth" });
                     }}
-                    ingredients={JSON.parse(recipe.Ingredients)}
-                />
-                {recipe.isStepPhoto ? (
-                    <Carousel
-                        onChange={() => {
-                            last.current.scrollIntoView({ block: "end", inline: "end", behavior: "smooth" });
-                        }}
-                        autoPlay={auto}
-                        navButtonsProps={{
-                            style: {
-                                backgroundColor: "gray",
-                            },
-                        }}
-                        animation="slide"
-                        cycleNavigation="true"
-                        navButtonsAlwaysVisible="true"
-                    >
-                        {photos.map((p) => (
-                            <Step
-                                onClick={() => {
-                                    setAuto(false);
-                                }}
-                                key={p.photo_id}
-                                photo={p}
-                                title={p.text_ru}
-                            />
-                        ))}
-                    </Carousel>
-                ) : (
-                    <Step photo={photos[0]} title={recipe.Description} />
-                )}
-            </Container>
-            <div id="last" ref={last}>
-                {" "}
-            </div>
-        </>
+                    autoPlay={auto}
+                    navButtonsProps={{
+                        style: {
+                            backgroundColor: "gray",
+                        },
+                    }}
+                    animation="slide"
+                    cycleNavigation="true"
+                    navButtonsAlwaysVisible="true"
+                >
+                    {photos.map((p) => (
+                        <Step
+                            onClick={() => {
+                                setAuto(false);
+                            }}
+                            key={p.photo_id}
+                            photo={p}
+                            title={p.text_ru}
+                        />
+                    ))}
+                </Carousel>
+            ) : (
+                <Step photo={photos[0]} title={recipe.Description} />
+            )}
+            <div ref={last} />
+        </Container>
     ) : null;
 };
 
