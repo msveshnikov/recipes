@@ -22,6 +22,11 @@ categories.forEach((c) => {
     jsonData = jsonData.filter((c) => !c.Media.includes("v322829554"));
     jsonData = jsonData.filter((c) => !c.Media.includes("v322519554"));
     jsonData = jsonData.filter((c) => !c.Media.includes("v606527036"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v425724852"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v540107427"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v614620554"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v616220852"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("recipe-2928"));
     
 
     if (c.ParentCategory_ID !== 0 || c.id === 104 || c.id===14) {

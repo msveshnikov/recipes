@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
 const Ingredients = (props) => {
     const classes = useStyles();
     return props.ingredients?.length > 0 ? (
-        <Paper onClick={props.onClick} className={classes.paper}>
+        <Paper className={classes.paper}>
             <Typography className={classes.title} variant="h5">
                 Ингредиенты:
             </Typography>
