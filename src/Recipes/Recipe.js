@@ -45,6 +45,8 @@ const Recipe = () => {
             <br />
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)} />
             {recipe.isStepPhoto ? <Steps photos={photos} /> : <Step photo={photos[0]} title={recipe.Description} />}
+            <br />
+            <br />
         </Container>
     ) : null;
 };
