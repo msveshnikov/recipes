@@ -17,44 +17,18 @@
     text-align: center;
 }
 
-.hit-card {
-    overflow: hidden;
-}
-
-.hit-image {
-    width: 100%;
-}
-
-.hit-name {
-    margin-bottom: 0.5em;
-}
-
-.hit-description {
-    color: #888;
-    font-size: 14px;
-    margin-bottom: 0.5em;
-}
-
-.hit-user {
-    vertical-align: middle;
-    margin-top: 1rem;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-}
-
 .ais-Hits-item {
-    width: 100%;
+    width: 96%;
 }
 
 @media (min-width: 500px) {
     .ais-Hits-item {
-        width: 47%;
+        width: 46%;
     }
 }
 
 @media (min-width: 1000px) {
     .ais-Hits-item {
-        width: 23%;
+        width: 30%;
     }
 }
