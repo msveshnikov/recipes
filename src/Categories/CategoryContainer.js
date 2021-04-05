@@ -21,7 +21,7 @@ const CategoryContainer = () => {
 
     return (
         <>
-            <Header title="My Cooks Club" />
+            <Header />
             <Container component="main" maxWidth="lg" className={classes.root}>
                 {cats
                     .filter((c) => c.ParentCategory_ID === parseInt(parent || 0))
