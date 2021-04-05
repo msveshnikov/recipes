@@ -16,21 +16,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-const Header = ({ title }) => {
+const Header = () => {
     const classes = useStyles();
-
     return (
         <>
             <Toolbar className={classes.toolbar}>
-                <Typography
-                    component="h2"
-                    variant="h5"
-                    color="inherit"
-                    align="center"
-                    noWrap
-                    className={classes.toolbarTitle}
-                >
-                    {title}
+                <Typography variant="h5" color="inherit" align="center" className={classes.toolbarTitle}>
+                    My Cooks Club
                 </Typography>
                 <IconButton component={RouterLink} to="/search">
                     <SearchIcon />
