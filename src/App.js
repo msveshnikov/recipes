@@ -3,6 +3,7 @@ import RecipesContainer from "./Recipes/RecipeContainer";
 import Recipe from "./Recipes/Recipe";
 import ScrollToTop from "./hoc/ScrollToTop";
 import CategoryContainer from "./Categories/CategoryContainer";
+import Search from ".//Search/Search";
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
                 <Route path="/recipe/:category/:id" component={Recipe} />
                 <Route path="/category/:parent" component={CategoryContainer} />
                 <Route path="/recipes/:category" component={RecipesContainer} />
+                <Route path="/search" component={Search} />
                 <Route path="/" exact component={CategoryContainer} />
                 <Redirect to="/" />
             </Switch>

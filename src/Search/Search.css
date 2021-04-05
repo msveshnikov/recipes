@@ -1,0 +1,60 @@
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-panel {
+    display: flex;
+}
+
+.searchbox {
+    margin-bottom: 1rem;
+}
+
+.pagination {
+    margin: 2rem auto;
+    text-align: center;
+}
+
+.hit-card {
+    overflow: hidden;
+}
+
+.hit-image {
+    width: 100%;
+}
+
+.hit-name {
+    margin-bottom: 0.5em;
+}
+
+.hit-description {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 0.5em;
+}
+
+.hit-user {
+    vertical-align: middle;
+    margin-top: 1rem;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.ais-Hits-item {
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    .ais-Hits-item {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .ais-Hits-item {
+        width: 23%;
+    }
+}
