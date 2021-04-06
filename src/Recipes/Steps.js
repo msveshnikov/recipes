@@ -3,7 +3,7 @@ import Carousel from "react-material-ui-carousel";
 import Step from "./Step";
 
 const Steps = ({ photos }) => {
-    const [auto, setAuto] = useState(true);
+    const [auto, setAuto] = useState(photos.length > 1);
     const last = useRef(null);
 
     return (
