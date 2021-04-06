@@ -28,8 +28,8 @@ const Ingredients = (props) => {
                     <Typography variant="subtitle1">
                         <b>{t.name}</b>
                     </Typography>
-                    {t.childs.map((p) => (
-                        <Typography variant="subtitle1" key={p.id}>
+                    {t.childs.map((p, index) => (
+                        <Typography variant="subtitle1" key={index}>
                             {ingredients.find((i) => i.id === parseInt(p.id))?.Title} {p.count}{" "}
                             {types.find((t) => t.id === parseInt(p.type))?.title}
                         </Typography>

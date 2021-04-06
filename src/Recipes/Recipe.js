@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
@@ -26,15 +26,10 @@ const Recipe = () => {
     }
 
     let recipe = recipes?.find((r) => r.id === parseInt(id));
-    let photos;
     if (recipe) {
-        photos = JSON.parse(recipe?.Media)?.photos;
+        var photos = JSON.parse(recipe?.Media)?.photos;
+        cacheImages(photos.map((p) => p.src_big));
     }
-    useEffect(() => {
-        if (recipe?.isStepPhoto) {
-            cacheImages(photos.map((p) => p.src_big));
-        }
-    }, [photos, recipe?.isStepPhoto]);
 
     return recipe ? (
         <Container component="main" maxWidth="md" className={classes.root}>
@@ -44,7 +39,8 @@ const Recipe = () => {
             </Typography>
             <br />
             <Ingredients ingredients={JSON.parse(recipe.Ingredients)} />
-            {recipe.isStepPhoto ? <Steps photos={photos} /> : <Step photo={photos[0]} title={recipe.Description} />}
+            {!recipe.isStepPhoto && <Step title={recipe.Description} />}
+            <Steps photos={photos} />
             <br />
             <br />
         </Container>
