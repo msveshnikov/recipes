@@ -21,7 +21,7 @@ const Ingredients = (props) => {
     return props.ingredients?.length > 0 ? (
         <Paper className={classes.paper}>
             <Typography className={classes.title} variant="h5">
-                Ингредиенты:
+                Состав:
             </Typography>
             {props.ingredients.map((t) => (
                 <Fragment key={t.name}>

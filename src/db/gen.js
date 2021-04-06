@@ -27,6 +27,7 @@ categories.forEach((c) => {
     jsonData = jsonData.filter((c) => !c.Media.includes("v614620554"));
     jsonData = jsonData.filter((c) => !c.Media.includes("v616220852"));
     jsonData = jsonData.filter((c) => !c.Media.includes("recipe-2928"));
+    jsonData = jsonData.filter((c) => !c.Media.includes("v408527036"));
     
 
     if (c.ParentCategory_ID !== 0 || c.id === 104 || c.id===14) {

@@ -29,7 +29,7 @@ const CategoryContainer = () => {
                     .map((c) => (
                         <CategoryCard key={c.id} category={c} />
                     ))}
-                {/* <FeedAd /> */}
+                <FeedAd />
             </Container>
             <Footer/>
         </>

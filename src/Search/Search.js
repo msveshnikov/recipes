@@ -24,7 +24,7 @@ function Search() {
                         <Index indexName="recipes">
                             <Configure hitsPerPage={12} />
                             <Stats />
-                            <Hits hitComponent={Recipe} />
+                            <Hits hitComponent={({ hit }) => <RecipeCard recipe={hit} />} />
                             <div className="pagination">
                                 <Pagination />
                             </div>
@@ -37,7 +37,3 @@ function Search() {
 }
 
 export default Search;
-
-function Recipe({ hit }) {
-    return <RecipeCard recipe={hit} />;
-}
