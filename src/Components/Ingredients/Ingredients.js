@@ -1,5 +1,5 @@
-import ingredients from "../db/ingredients.json";
-import types from "../db/types.json";
+import ingredients from "../../db/ingredients.json";
+import types from "../../db/types.json";
 import { Paper, Typography } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import { Fragment } from "react";

@@ -20,7 +20,7 @@ const Recipe = () => {
     let { category, id } = useParams();
     const [recipes, setRecipes] = useState();
     if (category) {
-        import("../db/" + category + ".json").then((json) => {
+        import("../../db/" + category + ".json").then((json) => {
             setRecipes(json.default);
         });
     }

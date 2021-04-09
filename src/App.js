@@ -1,9 +1,9 @@
 import { Route, Redirect, Switch, BrowserRouter } from "react-router-dom";
-import RecipesContainer from "./Recipes/RecipeContainer";
-import Recipe from "./Recipes/Recipe";
+import RecipesContainer from "./Components/Recipes/RecipeContainer";
+import Recipe from "./Components/Recipes/Recipe";
 import ScrollToTop from "./hoc/ScrollToTop";
-import CategoryContainer from "./Categories/CategoryContainer";
-import Search from ".//Search/Search";
+import CategoryContainer from "./Components/Categories/CategoryContainer";
+import Search from "./Components/Search/Search";
 
 function App() {
     return (
