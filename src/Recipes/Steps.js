@@ -16,6 +16,7 @@ const Steps = ({ photos }) => {
                 navButtonsProps={{
                     style: {
                         backgroundColor: "gray",
+                        opacity: "70%"
                     },
                 }}
                 animation="slide"
