@@ -28,7 +28,7 @@ const Recipe = () => {
     let recipe = recipes?.find((r) => r.id === parseInt(id));
     if (recipe) {
         var photos = JSON.parse(recipe?.Media)?.photos;
-        cacheImages(photos.map((p) => p.src_big));
+        cacheImages(photos.map((p) => p.src_big.replaceAll("http://","https://")));
     }
 
     return recipe ? (
