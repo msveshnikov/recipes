@@ -44,7 +44,7 @@ const RecipeCard = ({ recipe }) => {
             >
                 <CardMedia
                     className={classes.media}
-                    image={photo.src_big.replaceAll("http://","https://")}
+                    image={photo?.src_big?.replaceAll("http://","https://")}
                     component="img"
                     onError={(e) => {
                         setHidden(true);

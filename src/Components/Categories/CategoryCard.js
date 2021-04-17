@@ -44,7 +44,7 @@ const CategoryCard = ({ category }) => {
                 }
                 className={classes.actionArea}
             >
-                <CardMedia className={classes.media} image={category.src_big.replaceAll("http://","https://")} />
+                <CardMedia className={classes.media} image={category?.src_big?.replaceAll("http://","https://")} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {category.Title}
