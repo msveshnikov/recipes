@@ -1,6 +1,6 @@
 import CategoryCard from "./CategoryCard";
-import Container from "@material-ui/core/Container";
-import { makeStyles } from "@material-ui/core/styles";
+import Container from "@mui/material/Container";
+import { makeStyles } from "@mui/styles";
 import { useParams } from "react-router-dom";
 import cats from "../../db/cats.json";
 // import FeedAd from "./../AdSense/FeedAd";

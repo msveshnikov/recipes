@@ -4,7 +4,7 @@ import Recipe from "./Components/Recipes/Recipe";
 import ScrollToTop from "./hoc/ScrollToTop";
 import CategoryContainer from "./Components/Categories/CategoryContainer";
 import Search from "./Components/Search/Search";
-import { ThemeProvider, createMuiTheme } from "@material-ui/core/styles";
+import { ThemeProvider, createMuiTheme } from "@mui/material";
 
 const theme = createMuiTheme();
 

@@ -1,9 +1,9 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Toolbar from "@material-ui/core/Toolbar";
-import IconButton from "@material-ui/core/IconButton";
-import SearchIcon from "@material-ui/icons/Search";
-import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@mui/styles";
+import Toolbar from "@mui/material/Toolbar";
+import IconButton from "@mui/material/IconButton";
+import SearchIcon from "@mui/icons-material/Search";
+import Typography from "@mui/material/Typography";
 import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({

@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
-import Card from "@material-ui/core/Card";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Link from "@material-ui/core/Link";
+import { makeStyles } from "@mui/styles";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
