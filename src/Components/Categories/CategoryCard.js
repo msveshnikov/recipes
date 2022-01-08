@@ -43,7 +43,7 @@ const CategoryCard = ({ category }) => {
                         : "/recipes/" + category.id
                 }
                 className={classes.actionArea}
-            >
+                underline="hover">
                 <CardMedia className={classes.media} image={category?.src_big?.replaceAll("http://","https://")} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">

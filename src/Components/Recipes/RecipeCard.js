@@ -41,7 +41,7 @@ const RecipeCard = ({ recipe }) => {
                 component={RouterLink}
                 to={"/recipe/" + recipe.subcategory_id + "/" + recipe.id}
                 className={classes.actionArea}
-            >
+                underline="hover">
                 <CardMedia
                     className={classes.media}
                     image={photo?.src_big?.replaceAll("http://","https://")}

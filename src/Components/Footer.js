@@ -9,7 +9,11 @@ function Copyright() {
     return (
         <Typography variant="body2" color="textSecondary" align="center">
             {"Copyright © "}
-            <Link color="inherit" target="_blank" href="https://extender.tk/">
+            <Link
+                color="inherit"
+                target="_blank"
+                href="https://extender.tk/"
+                underline="hover">
                 MaxSoft
             </Link>{" "}
             <img
