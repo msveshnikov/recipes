@@ -18,18 +18,16 @@ const useStyles = makeStyles((theme) => ({
 
 const Header = () => {
     const classes = useStyles();
-    return (
-        <>
-            <Toolbar className={classes.toolbar}>
-                <Typography variant="h5" color="inherit" align="center" className={classes.toolbarTitle}>
-                    My Cooks Club
-                </Typography>
-                <IconButton component={RouterLink} to="/search">
-                    <SearchIcon />
-                </IconButton>
-            </Toolbar>
-        </>
-    );
+    return <>
+        <Toolbar className={classes.toolbar}>
+            <Typography variant="h5" color="inherit" align="center" className={classes.toolbarTitle}>
+                My Cooks Club
+            </Typography>
+            <IconButton component={RouterLink} to="/search" size="large">
+                <SearchIcon />
+            </IconButton>
+        </Toolbar>
+    </>;
 };
 
 export default Header;
