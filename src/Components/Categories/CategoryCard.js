@@ -1,5 +1,5 @@
 import React from "react";
-import { makeStyles } from "@mui/styles";
+import { styled } from '@mui/material/styles';
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -7,12 +7,25 @@ import CardMedia from "@mui/material/CardMedia";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 
-const useStyles = makeStyles((theme) => ({
-    media: {
+const PREFIX = 'CategoryCard';
+
+const classes = {
+    media: `${PREFIX}-media`,
+    card: `${PREFIX}-card`,
+    actionArea: `${PREFIX}-actionArea`
+};
+
+const StyledCard = styled(Card)((
+    {
+        theme
+    }
+) => ({
+    [`& .${classes.media}`]: {
         height: 200,
         width: 300,
     },
-    card: {
+
+    [`&.${classes.card}`]: {
         textAlign: "center",
         width: 300,
         borderRadius: 3,
@@ -22,19 +35,20 @@ const useStyles = makeStyles((theme) => ({
             transform: "scale(1.05)",
         },
     },
-    actionArea: {
+
+    [`& .${classes.actionArea}`]: {
         "&:hover, &:focus, &:visited, &:link, &:active": {
             textDecoration: "none",
         },
         color: "gray",
-    },
+    }
 }));
 
 const CategoryCard = ({ category }) => {
-    const classes = useStyles();
+
 
     return (
-        <Card className={classes.card}>
+        <StyledCard className={classes.card}>
             <Link
                 component={RouterLink}
                 to={
@@ -51,7 +65,7 @@ const CategoryCard = ({ category }) => {
                     </Typography>
                 </CardContent>
             </Link>
-        </Card>
+        </StyledCard>
     );
 };
 

@@ -1,9 +1,26 @@
-import { makeStyles } from "@mui/styles";
+import { styled } from '@mui/material/styles';
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import logo from "./../assets/images/logo.png";
 import preval from "preval.macro";
+
+const PREFIX = 'Footer';
+
+const classes = {
+    footer: `${PREFIX}-footer`
+};
+
+const Root = styled('footer')((
+    {
+        theme
+    }
+) => ({
+    [`&.${classes.footer}`]: {
+        backgroundColor: theme.palette.background.paper,
+        padding: theme.spacing(6, 0),
+    }
+}));
 
 function Copyright() {
     return (
@@ -27,18 +44,11 @@ function Copyright() {
     );
 }
 
-const useStyles = makeStyles((theme) => ({
-    footer: {
-        backgroundColor: theme.palette.background.paper,
-        padding: theme.spacing(6, 0),
-    },
-}));
-
 export default function Footer({ description, title }) {
-    const classes = useStyles();
+
 
     return (
-        <footer className={classes.footer}>
+        <Root className={classes.footer}>
             <Container maxWidth="lg">
                 <Typography variant="h6" align="center" gutterBottom>
                     {title}
@@ -48,6 +58,6 @@ export default function Footer({ description, title }) {
                 </Typography>
                 <Copyright />
             </Container>
-        </footer>
+        </Root>
     );
 }

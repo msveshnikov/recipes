@@ -1,25 +1,33 @@
 import ingredients from "../../db/ingredients.json";
+import { styled } from '@mui/material/styles';
 import types from "../../db/types.json";
 import { Paper, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import { Fragment } from "react";
 
-const useStyles = makeStyles(() => ({
-    paper: {
+const PREFIX = 'Ingredients';
+
+const classes = {
+    paper: `${PREFIX}-paper`,
+    title: `${PREFIX}-title`
+};
+
+const StyledPaper = styled(Paper)(() => ({
+    [`&.${classes.paper}`]: {
         backgroundColor: "#ffc",
         padding: 10,
         maxWidth: 400,
         marginBottom: 30,
     },
-    title: {
+
+    [`& .${classes.title}`]: {
         marginBottom: 20,
-    },
+    }
 }));
 
 const Ingredients = (props) => {
-    const classes = useStyles();
+
     return props.ingredients?.length > 0 ? (
-        <Paper className={classes.paper}>
+        <StyledPaper className={classes.paper}>
             <Typography className={classes.title} variant="h5">
                 Состав:
             </Typography>
@@ -36,7 +44,7 @@ const Ingredients = (props) => {
                     ))}
                 </Fragment>
             ))}
-        </Paper>
+        </StyledPaper>
     ) : null;
 };
 

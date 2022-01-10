@@ -1,22 +1,32 @@
 import { useState } from "react";
+import { styled } from '@mui/material/styles';
 import { useParams } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { makeStyles } from "@mui/styles";
 import Ingredients from "../Ingredients/Ingredients";
 import Step from "./Step";
 import Steps from "./Steps";
 
-const useStyles = makeStyles((theme) => ({
-    root: {
+const PREFIX = 'Recipe';
+
+const classes = {
+    root: `${PREFIX}-root`
+};
+
+const StyledContainer = styled(Container)((
+    {
+        theme
+    }
+) => ({
+    [`&.${classes.root}`]: {
         flexWrap: "wrap",
         justifyContent: "space-around",
         backgroundColor: theme.palette.background.paper,
-    },
+    }
 }));
 
 const Recipe = () => {
-    const classes = useStyles();
+
     let { category, id } = useParams();
     const [recipes, setRecipes] = useState();
     if (category) {
@@ -32,7 +42,7 @@ const Recipe = () => {
     }
 
     return recipe ? (
-        <Container component="main" maxWidth="md" className={classes.root}>
+        <StyledContainer component="main" maxWidth="md" className={classes.root}>
             <br />
             <Typography gutterBottom variant="h4">
                 {recipe.Title}
@@ -43,7 +53,7 @@ const Recipe = () => {
             <Steps photos={photos} />
             <br />
             <br />
-        </Container>
+        </StyledContainer>
     ) : null;
 };
 
