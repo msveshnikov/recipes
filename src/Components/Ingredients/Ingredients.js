@@ -1,14 +1,14 @@
 import ingredients from "../../db/ingredients.json";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import types from "../../db/types.json";
 import { Paper, Typography } from "@mui/material";
 import { Fragment } from "react";
 
-const PREFIX = 'Ingredients';
+const PREFIX = "Ingredients";
 
 const classes = {
     paper: `${PREFIX}-paper`,
-    title: `${PREFIX}-title`
+    title: `${PREFIX}-title`,
 };
 
 const StyledPaper = styled(Paper)(() => ({
@@ -21,11 +21,10 @@ const StyledPaper = styled(Paper)(() => ({
 
     [`& .${classes.title}`]: {
         marginBottom: 20,
-    }
+    },
 }));
 
 const Ingredients = (props) => {
-
     return props.ingredients?.length > 0 ? (
         <StyledPaper className={classes.paper}>
             <Typography className={classes.title} variant="h5">

@@ -1,5 +1,5 @@
 import React from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import Typography from "@mui/material/Typography";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -7,19 +7,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Link from "@mui/material/Link";
 import { Link as RouterLink } from "react-router-dom";
 
-const PREFIX = 'CategoryCard';
+const PREFIX = "CategoryCard";
 
 const classes = {
     media: `${PREFIX}-media`,
     card: `${PREFIX}-card`,
-    actionArea: `${PREFIX}-actionArea`
+    actionArea: `${PREFIX}-actionArea`,
 };
 
-const StyledCard = styled(Card)((
-    {
-        theme
-    }
-) => ({
+const StyledCard = styled(Card)(({ theme }) => ({
     [`& .${classes.media}`]: {
         height: 200,
         width: 300,
@@ -41,12 +37,10 @@ const StyledCard = styled(Card)((
             textDecoration: "none",
         },
         color: "gray",
-    }
+    },
 }));
 
 const CategoryCard = ({ category }) => {
-
-
     return (
         <StyledCard className={classes.card}>
             <Link
@@ -57,8 +51,9 @@ const CategoryCard = ({ category }) => {
                         : "/recipes/" + category.id
                 }
                 className={classes.actionArea}
-                underline="hover">
-                <CardMedia className={classes.media} image={category?.src_big?.replaceAll("http://","https://")} />
+                underline="hover"
+            >
+                <CardMedia className={classes.media} image={category?.src_big?.replaceAll("http://", "https://")} />
                 <CardContent>
                     <Typography gutterBottom variant="h4">
                         {category.Title}

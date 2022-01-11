@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { styled } from '@mui/material/styles';
+import { styled } from "@mui/material/styles";
 import { useParams } from "react-router-dom";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
@@ -7,26 +7,21 @@ import Ingredients from "../Ingredients/Ingredients";
 import Step from "./Step";
 import Steps from "./Steps";
 
-const PREFIX = 'Recipe';
+const PREFIX = "Recipe";
 
 const classes = {
-    root: `${PREFIX}-root`
+    root: `${PREFIX}-root`,
 };
 
-const StyledContainer = styled(Container)((
-    {
-        theme
-    }
-) => ({
+const StyledContainer = styled(Container)(({ theme }) => ({
     [`&.${classes.root}`]: {
         flexWrap: "wrap",
         justifyContent: "space-around",
         backgroundColor: theme.palette.background.paper,
-    }
+    },
 }));
 
 const Recipe = () => {
-
     let { category, id } = useParams();
     const [recipes, setRecipes] = useState();
     if (category) {
@@ -38,7 +33,7 @@ const Recipe = () => {
     let recipe = recipes?.find((r) => r.id === parseInt(id));
     if (recipe) {
         var photos = JSON.parse(recipe?.Media)?.photos;
-        cacheImages(photos.map((p) => p?.src_big?.replaceAll("http://","https://")));
+        cacheImages(photos.map((p) => p?.src_big?.replaceAll("http://", "https://")));
     }
 
     return recipe ? (
